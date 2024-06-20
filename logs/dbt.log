@@ -1,0 +1,110 @@
+[0m10:58:16.192897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f7e5fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f926330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f926000>]}
+
+
+============================== 10:58:16.203186 | be217b5a-f99b-4d5f-974c-1e7ff97db095 ==============================
+[0m10:58:16.203186 [info ] [MainThread]: Running with dbt=1.8.2
+[0m10:58:16.204163 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/vovix/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/Users/vovix/Documents/Projects/AE book/carsharing/carsharing/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:58:16.235025 [info ] [MainThread]: dbt version: 1.8.2
+[0m10:58:16.235734 [info ] [MainThread]: python version: 3.12.1
+[0m10:58:16.236282 [info ] [MainThread]: python path: /Library/Frameworks/Python.framework/Versions/3.12/bin/python3
+[0m10:58:16.236895 [info ] [MainThread]: os info: macOS-11.6.5-x86_64-i386-64bit
+[0m10:58:16.360316 [info ] [MainThread]: Using profiles dir at /Users/vovix/.dbt
+[0m10:58:16.361270 [info ] [MainThread]: Using profiles.yml file at /Users/vovix/.dbt/profiles.yml
+[0m10:58:16.362246 [info ] [MainThread]: Using dbt_project.yml file at /Users/vovix/Documents/Projects/AE book/carsharing/carsharing/dbt_project.yml
+[0m10:58:16.363786 [info ] [MainThread]: adapter type: postgres
+[0m10:58:16.364549 [info ] [MainThread]: adapter version: 1.8.1
+[0m10:58:16.546078 [info ] [MainThread]: Configuration:
+[0m10:58:16.546800 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m10:58:16.547369 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m10:58:16.547900 [info ] [MainThread]: Required dependencies:
+[0m10:58:16.548511 [debug] [MainThread]: Executing "git --help"
+[0m10:58:16.577955 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m10:58:16.579900 [debug] [MainThread]: STDERR: "b''"
+[0m10:58:16.580842 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:58:16.581592 [info ] [MainThread]: Connection:
+[0m10:58:16.582315 [info ] [MainThread]:   host: localhost
+[0m10:58:16.583394 [info ] [MainThread]:   port: 5432
+[0m10:58:16.584326 [info ] [MainThread]:   user: postgres
+[0m10:58:16.585123 [info ] [MainThread]:   database: carsharing
+[0m10:58:16.585672 [info ] [MainThread]:   schema: public
+[0m10:58:16.586238 [info ] [MainThread]:   connect_timeout: 10
+[0m10:58:16.586794 [info ] [MainThread]:   role: None
+[0m10:58:16.587314 [info ] [MainThread]:   search_path: None
+[0m10:58:16.587975 [info ] [MainThread]:   keepalives_idle: 0
+[0m10:58:16.588667 [info ] [MainThread]:   sslmode: None
+[0m10:58:16.590266 [info ] [MainThread]:   sslcert: None
+[0m10:58:16.591239 [info ] [MainThread]:   sslkey: None
+[0m10:58:16.591874 [info ] [MainThread]:   sslrootcert: None
+[0m10:58:16.592432 [info ] [MainThread]:   application_name: dbt
+[0m10:58:16.592984 [info ] [MainThread]:   retries: 1
+[0m10:58:16.594020 [info ] [MainThread]: Registered adapter: postgres=1.8.1
+[0m10:58:16.604264 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m10:58:16.687124 [debug] [MainThread]: Using postgres connection "debug"
+[0m10:58:16.687736 [debug] [MainThread]: On debug: select 1 as id
+[0m10:58:16.688189 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:58:16.824021 [debug] [MainThread]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:58:16.825857 [debug] [MainThread]: On debug: Close
+[0m10:58:16.826564 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m10:58:16.827645 [info ] [MainThread]: [32mAll checks passed![0m
+[0m10:58:16.831917 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.74148405, "process_user_time": 2.182424, "process_kernel_time": 0.519537, "process_mem_max_rss": "95764480", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:58:16.832989 [debug] [MainThread]: Command `dbt debug` succeeded at 10:58:16.832775 after 0.74 seconds
+[0m10:58:16.833625 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m10:58:16.834211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c35e8a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e3ef8f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f954920>]}
+[0m10:58:16.834863 [debug] [MainThread]: Flushing usage events
+[0m11:29:17.528515 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109fc6150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a106330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a105f40>]}
+
+
+============================== 11:29:17.537199 | e9a4e98f-4021-41c5-a867-ee9cfab8d77c ==============================
+[0m11:29:17.537199 [info ] [MainThread]: Running with dbt=1.8.2
+[0m11:29:17.538187 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/vovix/Documents/Projects/AE book/carsharing/logs', 'version_check': 'True', 'profiles_dir': '/Users/vovix/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:29:17.571716 [info ] [MainThread]: dbt version: 1.8.2
+[0m11:29:17.572573 [info ] [MainThread]: python version: 3.12.1
+[0m11:29:17.573186 [info ] [MainThread]: python path: /Library/Frameworks/Python.framework/Versions/3.12/bin/python3
+[0m11:29:17.573907 [info ] [MainThread]: os info: macOS-11.6.5-x86_64-i386-64bit
+[0m11:29:17.697035 [info ] [MainThread]: Using profiles dir at /Users/vovix/.dbt
+[0m11:29:17.697730 [info ] [MainThread]: Using profiles.yml file at /Users/vovix/.dbt/profiles.yml
+[0m11:29:17.698273 [info ] [MainThread]: Using dbt_project.yml file at /Users/vovix/Documents/Projects/AE book/carsharing/dbt_project.yml
+[0m11:29:17.699567 [info ] [MainThread]: adapter type: postgres
+[0m11:29:17.700255 [info ] [MainThread]: adapter version: 1.8.1
+[0m11:29:17.881558 [info ] [MainThread]: Configuration:
+[0m11:29:17.882223 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:29:17.883003 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:29:17.883548 [info ] [MainThread]: Required dependencies:
+[0m11:29:17.884126 [debug] [MainThread]: Executing "git --help"
+[0m11:29:17.918532 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:29:17.920413 [debug] [MainThread]: STDERR: "b''"
+[0m11:29:17.921125 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:29:17.921801 [info ] [MainThread]: Connection:
+[0m11:29:17.922724 [info ] [MainThread]:   host: localhost
+[0m11:29:17.923422 [info ] [MainThread]:   port: 5432
+[0m11:29:17.923993 [info ] [MainThread]:   user: postgres
+[0m11:29:17.924468 [info ] [MainThread]:   database: carsharing
+[0m11:29:17.925006 [info ] [MainThread]:   schema: public
+[0m11:29:17.925551 [info ] [MainThread]:   connect_timeout: 10
+[0m11:29:17.926078 [info ] [MainThread]:   role: None
+[0m11:29:17.926840 [info ] [MainThread]:   search_path: None
+[0m11:29:17.927549 [info ] [MainThread]:   keepalives_idle: 0
+[0m11:29:17.928231 [info ] [MainThread]:   sslmode: None
+[0m11:29:17.928951 [info ] [MainThread]:   sslcert: None
+[0m11:29:17.929512 [info ] [MainThread]:   sslkey: None
+[0m11:29:17.930022 [info ] [MainThread]:   sslrootcert: None
+[0m11:29:17.930606 [info ] [MainThread]:   application_name: dbt
+[0m11:29:17.931163 [info ] [MainThread]:   retries: 1
+[0m11:29:17.932161 [info ] [MainThread]: Registered adapter: postgres=1.8.1
+[0m11:29:17.943284 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m11:29:18.023533 [debug] [MainThread]: Using postgres connection "debug"
+[0m11:29:18.024130 [debug] [MainThread]: On debug: select 1 as id
+[0m11:29:18.024738 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:29:18.186076 [debug] [MainThread]: SQL status: SELECT 1 in 0.0 seconds
+[0m11:29:18.187669 [debug] [MainThread]: On debug: Close
+[0m11:29:18.188290 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:29:18.189036 [info ] [MainThread]: [32mAll checks passed![0m
+[0m11:29:18.192490 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.7740775, "process_user_time": 2.207851, "process_kernel_time": 0.579901, "process_mem_max_rss": "96174080", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m11:29:18.193496 [debug] [MainThread]: Command `dbt debug` succeeded at 11:29:18.193302 after 0.78 seconds
+[0m11:29:18.194075 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:29:18.194648 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bf28a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d10da0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a138260>]}
+[0m11:29:18.195307 [debug] [MainThread]: Flushing usage events

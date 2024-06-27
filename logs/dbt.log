@@ -941,3 +941,1840 @@ drop view if exists "carsharing"."public_staging"."stg_pg__services__dbt_backup"
 [0m10:53:18.859718 [debug] [MainThread]: Command `dbt run` succeeded at 10:53:18.859482 after 5.28 seconds
 [0m10:53:18.860496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ad0170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ad0bf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10808b0b0>]}
 [0m10:53:18.861743 [debug] [MainThread]: Flushing usage events
+[0m15:15:01.820372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c083c20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10da8a6c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10da8a360>]}
+
+
+============================== 15:15:01.829901 | 2ab528a7-937b-4091-b073-54d215f75a4d ==============================
+[0m15:15:01.829901 [info ] [MainThread]: Running with dbt=1.8.2
+[0m15:15:01.831025 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/vovix/Documents/Projects/AE book/carsharing/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/vovix/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:15:02.690561 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c9708f0>]}
+[0m15:15:02.821415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cc1a270>]}
+[0m15:15:02.823561 [info ] [MainThread]: Registered adapter: postgres=1.8.1
+[0m15:15:02.861709 [debug] [MainThread]: checksum: f0a141b9de567cb7f131613ba2682f40b3a1c6a157f81c6e5435862eff68f109, vars: {}, profile: , target: , version: 1.8.2
+[0m15:15:03.105185 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 6 files added, 0 files changed.
+[0m15:15:03.106040 [debug] [MainThread]: Partial parsing: added file: carsharing://models/intermediate/core/int_cars_joined_to_categories.sql
+[0m15:15:03.106768 [debug] [MainThread]: Partial parsing: added file: carsharing://models/intermediate/core/int_bookings_joined_to_customers_and_cars.sql
+[0m15:15:03.107445 [debug] [MainThread]: Partial parsing: added file: carsharing://models/intermediate/service/int_breakdowns_joined_to_cars.sql
+[0m15:15:03.107973 [debug] [MainThread]: Partial parsing: added file: carsharing://models/intermediate/core/int_customers_name_concatenated.sql
+[0m15:15:03.108491 [debug] [MainThread]: Partial parsing: added file: carsharing://models/intermediate/service/int_breakdowns_joined_to_breakdown_types.sql
+[0m15:15:03.108987 [debug] [MainThread]: Partial parsing: added file: carsharing://models/intermediate/finance/int_payments_joined_to_bookings.sql
+[0m15:15:03.421654 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.carsharing.marts
+[0m15:15:03.448338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e59fda0>]}
+[0m15:15:03.599522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e636f60>]}
+[0m15:15:03.600224 [info ] [MainThread]: Found 18 models, 12 sources, 413 macros
+[0m15:15:03.600771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e393830>]}
+[0m15:15:03.604167 [info ] [MainThread]: 
+[0m15:15:03.605085 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:15:03.614430 [debug] [ThreadPool]: Acquiring new postgres connection 'list_carsharing'
+[0m15:15:03.707065 [debug] [ThreadPool]: Using postgres connection "list_carsharing"
+[0m15:15:03.707724 [debug] [ThreadPool]: On list_carsharing: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "connection_name": "list_carsharing"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:15:03.708244 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:15:03.962262 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.0 seconds
+[0m15:15:03.964442 [debug] [ThreadPool]: On list_carsharing: Close
+[0m15:15:03.968360 [debug] [ThreadPool]: Using postgres connection "list_carsharing"
+[0m15:15:03.969067 [debug] [ThreadPool]: On list_carsharing: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "connection_name": "list_carsharing"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:15:03.969784 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:15:03.978583 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.0 seconds
+[0m15:15:03.980647 [debug] [ThreadPool]: On list_carsharing: Close
+[0m15:15:03.981660 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_carsharing, now create_carsharing_public_intermediate)
+[0m15:15:03.982779 [debug] [ThreadPool]: Creating schema "database: "carsharing"
+schema: "public_intermediate"
+"
+[0m15:15:03.992929 [debug] [ThreadPool]: Using postgres connection "create_carsharing_public_intermediate"
+[0m15:15:03.993604 [debug] [ThreadPool]: On create_carsharing_public_intermediate: BEGIN
+[0m15:15:03.995103 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:15:04.003864 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:04.004663 [debug] [ThreadPool]: Using postgres connection "create_carsharing_public_intermediate"
+[0m15:15:04.005330 [debug] [ThreadPool]: On create_carsharing_public_intermediate: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "connection_name": "create_carsharing_public_intermediate"} */
+create schema if not exists "public_intermediate"
+[0m15:15:04.021000 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.0 seconds
+[0m15:15:04.022732 [debug] [ThreadPool]: On create_carsharing_public_intermediate: COMMIT
+[0m15:15:04.023310 [debug] [ThreadPool]: Using postgres connection "create_carsharing_public_intermediate"
+[0m15:15:04.023844 [debug] [ThreadPool]: On create_carsharing_public_intermediate: COMMIT
+[0m15:15:04.027443 [debug] [ThreadPool]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:04.028181 [debug] [ThreadPool]: On create_carsharing_public_intermediate: Close
+[0m15:15:04.032031 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_carsharing_public_intermediate, now list_carsharing_public_intermediate)
+[0m15:15:04.040553 [debug] [ThreadPool]: Using postgres connection "list_carsharing_public_intermediate"
+[0m15:15:04.041139 [debug] [ThreadPool]: On list_carsharing_public_intermediate: BEGIN
+[0m15:15:04.042126 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:15:04.051637 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:04.052513 [debug] [ThreadPool]: Using postgres connection "list_carsharing_public_intermediate"
+[0m15:15:04.053888 [debug] [ThreadPool]: On list_carsharing_public_intermediate: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "connection_name": "list_carsharing_public_intermediate"} */
+select
+      'carsharing' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'carsharing' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'carsharing' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_intermediate'
+  
+[0m15:15:04.197348 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m15:15:04.199356 [debug] [ThreadPool]: On list_carsharing_public_intermediate: ROLLBACK
+[0m15:15:04.200084 [debug] [ThreadPool]: On list_carsharing_public_intermediate: Close
+[0m15:15:04.200940 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_carsharing_public_intermediate, now list_carsharing_public_staging)
+[0m15:15:04.203861 [debug] [ThreadPool]: Using postgres connection "list_carsharing_public_staging"
+[0m15:15:04.204508 [debug] [ThreadPool]: On list_carsharing_public_staging: BEGIN
+[0m15:15:04.205012 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:15:04.211433 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:04.211991 [debug] [ThreadPool]: Using postgres connection "list_carsharing_public_staging"
+[0m15:15:04.212469 [debug] [ThreadPool]: On list_carsharing_public_staging: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "connection_name": "list_carsharing_public_staging"} */
+select
+      'carsharing' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'carsharing' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'carsharing' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m15:15:04.216922 [debug] [ThreadPool]: SQL status: SELECT 12 in 0.0 seconds
+[0m15:15:04.219218 [debug] [ThreadPool]: On list_carsharing_public_staging: ROLLBACK
+[0m15:15:04.219953 [debug] [ThreadPool]: On list_carsharing_public_staging: Close
+[0m15:15:04.229467 [debug] [MainThread]: Using postgres connection "master"
+[0m15:15:04.230031 [debug] [MainThread]: On master: BEGIN
+[0m15:15:04.230462 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:15:04.236591 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:04.237306 [debug] [MainThread]: Using postgres connection "master"
+[0m15:15:04.237903 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m15:15:04.313303 [debug] [MainThread]: SQL status: SELECT 12 in 0.0 seconds
+[0m15:15:04.315731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e5b4260>]}
+[0m15:15:04.316551 [debug] [MainThread]: On master: ROLLBACK
+[0m15:15:04.317323 [debug] [MainThread]: Using postgres connection "master"
+[0m15:15:04.317828 [debug] [MainThread]: On master: BEGIN
+[0m15:15:04.318687 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:04.319434 [debug] [MainThread]: On master: COMMIT
+[0m15:15:04.319908 [debug] [MainThread]: Using postgres connection "master"
+[0m15:15:04.320352 [debug] [MainThread]: On master: COMMIT
+[0m15:15:04.320978 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:04.321463 [debug] [MainThread]: On master: Close
+[0m15:15:04.322202 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:15:04.322857 [info ] [MainThread]: 
+[0m15:15:04.326100 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__accidents
+[0m15:15:04.326981 [info ] [Thread-1 (]: 1 of 18 START sql view model public_staging.stg_pg__accidents .................. [RUN]
+[0m15:15:04.327717 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_carsharing_public_staging, now model.carsharing.stg_pg__accidents)
+[0m15:15:04.328417 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__accidents
+[0m15:15:04.340946 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__accidents"
+[0m15:15:04.343480 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__accidents
+[0m15:15:04.441716 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.stg_pg__accidents"
+[0m15:15:04.442866 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__accidents"
+[0m15:15:04.443408 [debug] [Thread-1 (]: On model.carsharing.stg_pg__accidents: BEGIN
+[0m15:15:04.443903 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:04.450283 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:04.450930 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__accidents"
+[0m15:15:04.451455 [debug] [Thread-1 (]: On model.carsharing.stg_pg__accidents: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__accidents"} */
+
+  create view "carsharing"."public_staging"."stg_pg__accidents__dbt_tmp"
+    
+    
+  as (
+    with source as (
+
+    select * from "carsharing"."public"."accident"
+
+),
+
+staged as (
+
+    select 
+    
+        accident_id,
+        accident_text,
+        accident_date as created_at,
+        car_id,
+        ride_id
+
+    from source
+
+)
+
+select * from staged
+  );
+[0m15:15:04.494466 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:04.503301 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__accidents"
+[0m15:15:04.503958 [debug] [Thread-1 (]: On model.carsharing.stg_pg__accidents: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__accidents"} */
+alter table "carsharing"."public_staging"."stg_pg__accidents" rename to "stg_pg__accidents__dbt_backup"
+[0m15:15:04.506725 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:04.510999 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__accidents"
+[0m15:15:04.511592 [debug] [Thread-1 (]: On model.carsharing.stg_pg__accidents: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__accidents"} */
+alter table "carsharing"."public_staging"."stg_pg__accidents__dbt_tmp" rename to "stg_pg__accidents"
+[0m15:15:04.512556 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:04.536340 [debug] [Thread-1 (]: On model.carsharing.stg_pg__accidents: COMMIT
+[0m15:15:04.537127 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__accidents"
+[0m15:15:04.537665 [debug] [Thread-1 (]: On model.carsharing.stg_pg__accidents: COMMIT
+[0m15:15:04.538798 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:04.547652 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_staging"."stg_pg__accidents__dbt_backup"
+[0m15:15:04.554683 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__accidents"
+[0m15:15:04.555323 [debug] [Thread-1 (]: On model.carsharing.stg_pg__accidents: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__accidents"} */
+drop view if exists "carsharing"."public_staging"."stg_pg__accidents__dbt_backup" cascade
+[0m15:15:04.566231 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:04.569944 [debug] [Thread-1 (]: On model.carsharing.stg_pg__accidents: Close
+[0m15:15:04.572213 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e676270>]}
+[0m15:15:04.573272 [info ] [Thread-1 (]: 1 of 18 OK created sql view model public_staging.stg_pg__accidents ............. [[32mCREATE VIEW[0m in 0.24s]
+[0m15:15:04.574260 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__accidents
+[0m15:15:04.574932 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__bookings
+[0m15:15:04.575678 [info ] [Thread-1 (]: 2 of 18 START sql view model public_staging.stg_pg__bookings ................... [RUN]
+[0m15:15:04.576397 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__accidents, now model.carsharing.stg_pg__bookings)
+[0m15:15:04.576959 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__bookings
+[0m15:15:04.583169 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__bookings"
+[0m15:15:04.584855 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__bookings
+[0m15:15:04.593522 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.stg_pg__bookings"
+[0m15:15:04.595036 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__bookings"
+[0m15:15:04.595748 [debug] [Thread-1 (]: On model.carsharing.stg_pg__bookings: BEGIN
+[0m15:15:04.596300 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:04.602335 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:04.603012 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__bookings"
+[0m15:15:04.603588 [debug] [Thread-1 (]: On model.carsharing.stg_pg__bookings: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__bookings"} */
+
+  create view "carsharing"."public_staging"."stg_pg__bookings__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    
+    select * from "carsharing"."public"."booking"
+
+),
+
+staged as (
+
+    select
+    
+        booking_id,
+        booking_date as created_at,
+        customer_id,
+        car_id
+    
+    from source
+
+)
+
+select * from staged
+  );
+[0m15:15:04.628390 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:04.633814 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__bookings"
+[0m15:15:04.634533 [debug] [Thread-1 (]: On model.carsharing.stg_pg__bookings: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__bookings"} */
+alter table "carsharing"."public_staging"."stg_pg__bookings" rename to "stg_pg__bookings__dbt_backup"
+[0m15:15:04.635787 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:04.639769 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__bookings"
+[0m15:15:04.640492 [debug] [Thread-1 (]: On model.carsharing.stg_pg__bookings: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__bookings"} */
+alter table "carsharing"."public_staging"."stg_pg__bookings__dbt_tmp" rename to "stg_pg__bookings"
+[0m15:15:04.641740 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:04.644563 [debug] [Thread-1 (]: On model.carsharing.stg_pg__bookings: COMMIT
+[0m15:15:04.645202 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__bookings"
+[0m15:15:04.645716 [debug] [Thread-1 (]: On model.carsharing.stg_pg__bookings: COMMIT
+[0m15:15:04.646938 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:04.650399 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_staging"."stg_pg__bookings__dbt_backup"
+[0m15:15:04.651428 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__bookings"
+[0m15:15:04.651951 [debug] [Thread-1 (]: On model.carsharing.stg_pg__bookings: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__bookings"} */
+drop view if exists "carsharing"."public_staging"."stg_pg__bookings__dbt_backup" cascade
+[0m15:15:04.653847 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:04.655954 [debug] [Thread-1 (]: On model.carsharing.stg_pg__bookings: Close
+[0m15:15:04.656731 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ea7cb90>]}
+[0m15:15:04.657590 [info ] [Thread-1 (]: 2 of 18 OK created sql view model public_staging.stg_pg__bookings .............. [[32mCREATE VIEW[0m in 0.08s]
+[0m15:15:04.658815 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__bookings
+[0m15:15:04.659509 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__breakdown_types
+[0m15:15:04.660265 [info ] [Thread-1 (]: 3 of 18 START sql view model public_staging.stg_pg__breakdown_types ............ [RUN]
+[0m15:15:04.661042 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__bookings, now model.carsharing.stg_pg__breakdown_types)
+[0m15:15:04.661643 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__breakdown_types
+[0m15:15:04.665658 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__breakdown_types"
+[0m15:15:04.666927 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__breakdown_types
+[0m15:15:04.674457 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.stg_pg__breakdown_types"
+[0m15:15:04.676337 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__breakdown_types"
+[0m15:15:04.677017 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdown_types: BEGIN
+[0m15:15:04.677537 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:04.684174 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:04.684807 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__breakdown_types"
+[0m15:15:04.685338 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdown_types: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__breakdown_types"} */
+
+  create view "carsharing"."public_staging"."stg_pg__breakdown_types__dbt_tmp"
+    
+    
+  as (
+    with source as (
+
+    select * from "carsharing"."public"."breakdown_type"
+
+),
+
+staged as (
+
+    select * from source
+
+)
+
+select * from staged
+  );
+[0m15:15:04.733790 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:04.739932 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__breakdown_types"
+[0m15:15:04.740829 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdown_types: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__breakdown_types"} */
+alter table "carsharing"."public_staging"."stg_pg__breakdown_types" rename to "stg_pg__breakdown_types__dbt_backup"
+[0m15:15:04.742499 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:04.747432 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__breakdown_types"
+[0m15:15:04.748101 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdown_types: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__breakdown_types"} */
+alter table "carsharing"."public_staging"."stg_pg__breakdown_types__dbt_tmp" rename to "stg_pg__breakdown_types"
+[0m15:15:04.749224 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:04.751476 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdown_types: COMMIT
+[0m15:15:04.752108 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__breakdown_types"
+[0m15:15:04.752669 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdown_types: COMMIT
+[0m15:15:04.769325 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:04.772680 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_staging"."stg_pg__breakdown_types__dbt_backup"
+[0m15:15:04.773698 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__breakdown_types"
+[0m15:15:04.774251 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdown_types: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__breakdown_types"} */
+drop view if exists "carsharing"."public_staging"."stg_pg__breakdown_types__dbt_backup" cascade
+[0m15:15:04.777043 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:04.779174 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdown_types: Close
+[0m15:15:04.780075 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eb730e0>]}
+[0m15:15:04.781005 [info ] [Thread-1 (]: 3 of 18 OK created sql view model public_staging.stg_pg__breakdown_types ....... [[32mCREATE VIEW[0m in 0.12s]
+[0m15:15:04.782346 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__breakdown_types
+[0m15:15:04.783164 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__breakdowns
+[0m15:15:04.783943 [info ] [Thread-1 (]: 4 of 18 START sql view model public_staging.stg_pg__breakdowns ................. [RUN]
+[0m15:15:04.784667 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__breakdown_types, now model.carsharing.stg_pg__breakdowns)
+[0m15:15:04.785219 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__breakdowns
+[0m15:15:04.790294 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__breakdowns"
+[0m15:15:04.793352 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__breakdowns
+[0m15:15:04.803851 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.stg_pg__breakdowns"
+[0m15:15:04.805256 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__breakdowns"
+[0m15:15:04.806142 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdowns: BEGIN
+[0m15:15:04.808147 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:04.820077 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:04.820800 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__breakdowns"
+[0m15:15:04.822067 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdowns: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__breakdowns"} */
+
+  create view "carsharing"."public_staging"."stg_pg__breakdowns__dbt_tmp"
+    
+    
+  as (
+    with source as (
+
+    select * from "carsharing"."public"."breakdown"
+
+),
+
+staged as (
+
+    select
+    
+        breakdown_id,
+        breakdown_date as created_at,
+        breakdown_type_id,
+        car_id
+    
+    from source
+
+)
+
+select * from staged
+  );
+[0m15:15:04.871455 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:04.875792 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__breakdowns"
+[0m15:15:04.876501 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdowns: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__breakdowns"} */
+alter table "carsharing"."public_staging"."stg_pg__breakdowns" rename to "stg_pg__breakdowns__dbt_backup"
+[0m15:15:04.877752 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:04.881936 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__breakdowns"
+[0m15:15:04.882898 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdowns: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__breakdowns"} */
+alter table "carsharing"."public_staging"."stg_pg__breakdowns__dbt_tmp" rename to "stg_pg__breakdowns"
+[0m15:15:04.884246 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:04.886389 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdowns: COMMIT
+[0m15:15:04.886930 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__breakdowns"
+[0m15:15:04.887750 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdowns: COMMIT
+[0m15:15:04.890083 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:04.893458 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_staging"."stg_pg__breakdowns__dbt_backup"
+[0m15:15:04.894395 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__breakdowns"
+[0m15:15:04.894918 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdowns: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__breakdowns"} */
+drop view if exists "carsharing"."public_staging"."stg_pg__breakdowns__dbt_backup" cascade
+[0m15:15:04.896688 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:04.899120 [debug] [Thread-1 (]: On model.carsharing.stg_pg__breakdowns: Close
+[0m15:15:04.900038 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ebc4740>]}
+[0m15:15:04.900969 [info ] [Thread-1 (]: 4 of 18 OK created sql view model public_staging.stg_pg__breakdowns ............ [[32mCREATE VIEW[0m in 0.12s]
+[0m15:15:04.902165 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__breakdowns
+[0m15:15:04.902950 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__cars
+[0m15:15:04.903919 [info ] [Thread-1 (]: 5 of 18 START sql view model public_staging.stg_pg__cars ....................... [RUN]
+[0m15:15:04.904684 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__breakdowns, now model.carsharing.stg_pg__cars)
+[0m15:15:04.905231 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__cars
+[0m15:15:04.909616 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__cars"
+[0m15:15:04.910852 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__cars
+[0m15:15:04.917833 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.stg_pg__cars"
+[0m15:15:04.919011 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__cars"
+[0m15:15:04.919598 [debug] [Thread-1 (]: On model.carsharing.stg_pg__cars: BEGIN
+[0m15:15:04.920159 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:04.929657 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:04.930580 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__cars"
+[0m15:15:04.931293 [debug] [Thread-1 (]: On model.carsharing.stg_pg__cars: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__cars"} */
+
+  create view "carsharing"."public_staging"."stg_pg__cars__dbt_tmp"
+    
+    
+  as (
+    with source as (
+
+    select * from "carsharing"."public"."car"
+
+),
+
+staged as (
+
+    select * from source
+
+)
+
+select * from staged
+  );
+[0m15:15:04.971911 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:04.976930 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__cars"
+[0m15:15:04.977612 [debug] [Thread-1 (]: On model.carsharing.stg_pg__cars: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__cars"} */
+alter table "carsharing"."public_staging"."stg_pg__cars" rename to "stg_pg__cars__dbt_backup"
+[0m15:15:04.978973 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:04.983157 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__cars"
+[0m15:15:04.983879 [debug] [Thread-1 (]: On model.carsharing.stg_pg__cars: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__cars"} */
+alter table "carsharing"."public_staging"."stg_pg__cars__dbt_tmp" rename to "stg_pg__cars"
+[0m15:15:04.984861 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:04.987051 [debug] [Thread-1 (]: On model.carsharing.stg_pg__cars: COMMIT
+[0m15:15:04.987624 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__cars"
+[0m15:15:04.988125 [debug] [Thread-1 (]: On model.carsharing.stg_pg__cars: COMMIT
+[0m15:15:04.989388 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:04.992547 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_staging"."stg_pg__cars__dbt_backup"
+[0m15:15:04.993502 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__cars"
+[0m15:15:04.994037 [debug] [Thread-1 (]: On model.carsharing.stg_pg__cars: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__cars"} */
+drop view if exists "carsharing"."public_staging"."stg_pg__cars__dbt_backup" cascade
+[0m15:15:04.995810 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:04.997687 [debug] [Thread-1 (]: On model.carsharing.stg_pg__cars: Close
+[0m15:15:04.998434 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e69ba10>]}
+[0m15:15:04.999280 [info ] [Thread-1 (]: 5 of 18 OK created sql view model public_staging.stg_pg__cars .................. [[32mCREATE VIEW[0m in 0.09s]
+[0m15:15:05.000349 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__cars
+[0m15:15:05.000992 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__categories
+[0m15:15:05.001730 [info ] [Thread-1 (]: 6 of 18 START sql view model public_staging.stg_pg__categories ................. [RUN]
+[0m15:15:05.002416 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__cars, now model.carsharing.stg_pg__categories)
+[0m15:15:05.002952 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__categories
+[0m15:15:05.006780 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__categories"
+[0m15:15:05.008171 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__categories
+[0m15:15:05.013504 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.stg_pg__categories"
+[0m15:15:05.015003 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__categories"
+[0m15:15:05.016115 [debug] [Thread-1 (]: On model.carsharing.stg_pg__categories: BEGIN
+[0m15:15:05.016970 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:05.029790 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:05.030444 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__categories"
+[0m15:15:05.030969 [debug] [Thread-1 (]: On model.carsharing.stg_pg__categories: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__categories"} */
+
+  create view "carsharing"."public_staging"."stg_pg__categories__dbt_tmp"
+    
+    
+  as (
+    with source as (
+
+    select * from "carsharing"."public"."category"
+
+),
+
+staged as (
+
+    select * from source
+
+)
+
+select * from staged
+  );
+[0m15:15:05.063863 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:05.068822 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__categories"
+[0m15:15:05.069556 [debug] [Thread-1 (]: On model.carsharing.stg_pg__categories: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__categories"} */
+alter table "carsharing"."public_staging"."stg_pg__categories" rename to "stg_pg__categories__dbt_backup"
+[0m15:15:05.070927 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:05.075279 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__categories"
+[0m15:15:05.075911 [debug] [Thread-1 (]: On model.carsharing.stg_pg__categories: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__categories"} */
+alter table "carsharing"."public_staging"."stg_pg__categories__dbt_tmp" rename to "stg_pg__categories"
+[0m15:15:05.076933 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:05.079158 [debug] [Thread-1 (]: On model.carsharing.stg_pg__categories: COMMIT
+[0m15:15:05.079823 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__categories"
+[0m15:15:05.080336 [debug] [Thread-1 (]: On model.carsharing.stg_pg__categories: COMMIT
+[0m15:15:05.081492 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:05.087021 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_staging"."stg_pg__categories__dbt_backup"
+[0m15:15:05.088300 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__categories"
+[0m15:15:05.088848 [debug] [Thread-1 (]: On model.carsharing.stg_pg__categories: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__categories"} */
+drop view if exists "carsharing"."public_staging"."stg_pg__categories__dbt_backup" cascade
+[0m15:15:05.092006 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:05.094099 [debug] [Thread-1 (]: On model.carsharing.stg_pg__categories: Close
+[0m15:15:05.094848 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ebbcf80>]}
+[0m15:15:05.095691 [info ] [Thread-1 (]: 6 of 18 OK created sql view model public_staging.stg_pg__categories ............ [[32mCREATE VIEW[0m in 0.09s]
+[0m15:15:05.096679 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__categories
+[0m15:15:05.097330 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__customers
+[0m15:15:05.098296 [info ] [Thread-1 (]: 7 of 18 START sql view model public_staging.stg_pg__customers .................. [RUN]
+[0m15:15:05.098996 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__categories, now model.carsharing.stg_pg__customers)
+[0m15:15:05.099531 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__customers
+[0m15:15:05.102897 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__customers"
+[0m15:15:05.104298 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__customers
+[0m15:15:05.110232 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.stg_pg__customers"
+[0m15:15:05.112057 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__customers"
+[0m15:15:05.113078 [debug] [Thread-1 (]: On model.carsharing.stg_pg__customers: BEGIN
+[0m15:15:05.113860 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:05.131027 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:05.131775 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__customers"
+[0m15:15:05.132363 [debug] [Thread-1 (]: On model.carsharing.stg_pg__customers: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__customers"} */
+
+  create view "carsharing"."public_staging"."stg_pg__customers__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    
+    select * from "carsharing"."public"."customer"
+
+),
+
+staged as (
+
+    select
+    
+        customer_id,
+        first_name,
+        last_name,
+        gender,
+        driving_licence_number,
+        driving_licence_valid_from,
+        phone,
+        email,
+        last_update as updated_at   
+    
+    from source
+
+)
+
+select * from staged
+  );
+[0m15:15:05.163121 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:05.167876 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__customers"
+[0m15:15:05.168528 [debug] [Thread-1 (]: On model.carsharing.stg_pg__customers: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__customers"} */
+alter table "carsharing"."public_staging"."stg_pg__customers" rename to "stg_pg__customers__dbt_backup"
+[0m15:15:05.171213 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:05.175337 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__customers"
+[0m15:15:05.176055 [debug] [Thread-1 (]: On model.carsharing.stg_pg__customers: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__customers"} */
+alter table "carsharing"."public_staging"."stg_pg__customers__dbt_tmp" rename to "stg_pg__customers"
+[0m15:15:05.177392 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:05.179756 [debug] [Thread-1 (]: On model.carsharing.stg_pg__customers: COMMIT
+[0m15:15:05.180307 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__customers"
+[0m15:15:05.180809 [debug] [Thread-1 (]: On model.carsharing.stg_pg__customers: COMMIT
+[0m15:15:05.182298 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:05.186155 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_staging"."stg_pg__customers__dbt_backup"
+[0m15:15:05.187390 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__customers"
+[0m15:15:05.188036 [debug] [Thread-1 (]: On model.carsharing.stg_pg__customers: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__customers"} */
+drop view if exists "carsharing"."public_staging"."stg_pg__customers__dbt_backup" cascade
+[0m15:15:05.190149 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:05.192321 [debug] [Thread-1 (]: On model.carsharing.stg_pg__customers: Close
+[0m15:15:05.193258 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ebbeae0>]}
+[0m15:15:05.194331 [info ] [Thread-1 (]: 7 of 18 OK created sql view model public_staging.stg_pg__customers ............. [[32mCREATE VIEW[0m in 0.09s]
+[0m15:15:05.195570 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__customers
+[0m15:15:05.196392 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__locations
+[0m15:15:05.197306 [info ] [Thread-1 (]: 8 of 18 START sql view model public_staging.stg_pg__locations .................. [RUN]
+[0m15:15:05.198026 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__customers, now model.carsharing.stg_pg__locations)
+[0m15:15:05.198566 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__locations
+[0m15:15:05.202016 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__locations"
+[0m15:15:05.203305 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__locations
+[0m15:15:05.208889 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.stg_pg__locations"
+[0m15:15:05.210226 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__locations"
+[0m15:15:05.211194 [debug] [Thread-1 (]: On model.carsharing.stg_pg__locations: BEGIN
+[0m15:15:05.212009 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:05.230856 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:05.232290 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__locations"
+[0m15:15:05.233013 [debug] [Thread-1 (]: On model.carsharing.stg_pg__locations: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__locations"} */
+
+  create view "carsharing"."public_staging"."stg_pg__locations__dbt_tmp"
+    
+    
+  as (
+    with source as (
+
+    select * from "carsharing"."public"."location"
+
+),
+
+staged as (
+
+    select * from source
+
+)
+
+select * from staged
+  );
+[0m15:15:05.238317 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:05.244762 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__locations"
+[0m15:15:05.245799 [debug] [Thread-1 (]: On model.carsharing.stg_pg__locations: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__locations"} */
+alter table "carsharing"."public_staging"."stg_pg__locations" rename to "stg_pg__locations__dbt_backup"
+[0m15:15:05.247650 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:05.251977 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__locations"
+[0m15:15:05.252840 [debug] [Thread-1 (]: On model.carsharing.stg_pg__locations: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__locations"} */
+alter table "carsharing"."public_staging"."stg_pg__locations__dbt_tmp" rename to "stg_pg__locations"
+[0m15:15:05.254459 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:05.259148 [debug] [Thread-1 (]: On model.carsharing.stg_pg__locations: COMMIT
+[0m15:15:05.260550 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__locations"
+[0m15:15:05.261575 [debug] [Thread-1 (]: On model.carsharing.stg_pg__locations: COMMIT
+[0m15:15:05.262924 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:05.266452 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_staging"."stg_pg__locations__dbt_backup"
+[0m15:15:05.268042 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__locations"
+[0m15:15:05.268733 [debug] [Thread-1 (]: On model.carsharing.stg_pg__locations: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__locations"} */
+drop view if exists "carsharing"."public_staging"."stg_pg__locations__dbt_backup" cascade
+[0m15:15:05.270525 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:05.272517 [debug] [Thread-1 (]: On model.carsharing.stg_pg__locations: Close
+[0m15:15:05.273469 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eb424e0>]}
+[0m15:15:05.274484 [info ] [Thread-1 (]: 8 of 18 OK created sql view model public_staging.stg_pg__locations ............. [[32mCREATE VIEW[0m in 0.08s]
+[0m15:15:05.275618 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__locations
+[0m15:15:05.276334 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__payments
+[0m15:15:05.277083 [info ] [Thread-1 (]: 9 of 18 START sql view model public_staging.stg_pg__payments ................... [RUN]
+[0m15:15:05.277782 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__locations, now model.carsharing.stg_pg__payments)
+[0m15:15:05.278322 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__payments
+[0m15:15:05.281437 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__payments"
+[0m15:15:05.282942 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__payments
+[0m15:15:05.289970 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.stg_pg__payments"
+[0m15:15:05.291482 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__payments"
+[0m15:15:05.293234 [debug] [Thread-1 (]: On model.carsharing.stg_pg__payments: BEGIN
+[0m15:15:05.294023 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:05.303921 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:05.305079 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__payments"
+[0m15:15:05.306059 [debug] [Thread-1 (]: On model.carsharing.stg_pg__payments: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__payments"} */
+
+  create view "carsharing"."public_staging"."stg_pg__payments__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    
+    select * from "carsharing"."public"."payment"
+
+),
+
+staged as (
+
+    select
+    
+        payment_id,
+        payment_date as created_at,
+        booking_id,
+        amount
+    
+    from source
+
+)
+
+select * from staged
+  );
+[0m15:15:05.357746 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:05.362557 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__payments"
+[0m15:15:05.363477 [debug] [Thread-1 (]: On model.carsharing.stg_pg__payments: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__payments"} */
+alter table "carsharing"."public_staging"."stg_pg__payments" rename to "stg_pg__payments__dbt_backup"
+[0m15:15:05.366201 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:05.370494 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__payments"
+[0m15:15:05.371121 [debug] [Thread-1 (]: On model.carsharing.stg_pg__payments: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__payments"} */
+alter table "carsharing"."public_staging"."stg_pg__payments__dbt_tmp" rename to "stg_pg__payments"
+[0m15:15:05.372110 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:05.374573 [debug] [Thread-1 (]: On model.carsharing.stg_pg__payments: COMMIT
+[0m15:15:05.375124 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__payments"
+[0m15:15:05.375629 [debug] [Thread-1 (]: On model.carsharing.stg_pg__payments: COMMIT
+[0m15:15:05.376777 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:05.379911 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_staging"."stg_pg__payments__dbt_backup"
+[0m15:15:05.380874 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__payments"
+[0m15:15:05.381402 [debug] [Thread-1 (]: On model.carsharing.stg_pg__payments: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__payments"} */
+drop view if exists "carsharing"."public_staging"."stg_pg__payments__dbt_backup" cascade
+[0m15:15:05.383110 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:05.384961 [debug] [Thread-1 (]: On model.carsharing.stg_pg__payments: Close
+[0m15:15:05.385725 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eba17f0>]}
+[0m15:15:05.386569 [info ] [Thread-1 (]: 9 of 18 OK created sql view model public_staging.stg_pg__payments .............. [[32mCREATE VIEW[0m in 0.11s]
+[0m15:15:05.387914 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__payments
+[0m15:15:05.388624 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__rides
+[0m15:15:05.389305 [info ] [Thread-1 (]: 10 of 18 START sql view model public_staging.stg_pg__rides ..................... [RUN]
+[0m15:15:05.390068 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__payments, now model.carsharing.stg_pg__rides)
+[0m15:15:05.390606 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__rides
+[0m15:15:05.394981 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__rides"
+[0m15:15:05.396120 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__rides
+[0m15:15:05.403212 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.stg_pg__rides"
+[0m15:15:05.404657 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__rides"
+[0m15:15:05.405676 [debug] [Thread-1 (]: On model.carsharing.stg_pg__rides: BEGIN
+[0m15:15:05.407327 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:05.421345 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:05.423361 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__rides"
+[0m15:15:05.424717 [debug] [Thread-1 (]: On model.carsharing.stg_pg__rides: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__rides"} */
+
+  create view "carsharing"."public_staging"."stg_pg__rides__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    
+    select * from "carsharing"."public"."ride"
+
+),
+
+staged as (
+
+    select * from source
+
+)
+
+select * from staged
+  );
+[0m15:15:05.438059 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:05.444620 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__rides"
+[0m15:15:05.445818 [debug] [Thread-1 (]: On model.carsharing.stg_pg__rides: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__rides"} */
+alter table "carsharing"."public_staging"."stg_pg__rides" rename to "stg_pg__rides__dbt_backup"
+[0m15:15:05.447520 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:05.451715 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__rides"
+[0m15:15:05.452355 [debug] [Thread-1 (]: On model.carsharing.stg_pg__rides: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__rides"} */
+alter table "carsharing"."public_staging"."stg_pg__rides__dbt_tmp" rename to "stg_pg__rides"
+[0m15:15:05.453497 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:05.457196 [debug] [Thread-1 (]: On model.carsharing.stg_pg__rides: COMMIT
+[0m15:15:05.458264 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__rides"
+[0m15:15:05.459184 [debug] [Thread-1 (]: On model.carsharing.stg_pg__rides: COMMIT
+[0m15:15:05.460890 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:05.464916 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_staging"."stg_pg__rides__dbt_backup"
+[0m15:15:05.465927 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__rides"
+[0m15:15:05.466468 [debug] [Thread-1 (]: On model.carsharing.stg_pg__rides: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__rides"} */
+drop view if exists "carsharing"."public_staging"."stg_pg__rides__dbt_backup" cascade
+[0m15:15:05.468269 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:05.470365 [debug] [Thread-1 (]: On model.carsharing.stg_pg__rides: Close
+[0m15:15:05.471220 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e6e3440>]}
+[0m15:15:05.472109 [info ] [Thread-1 (]: 10 of 18 OK created sql view model public_staging.stg_pg__rides ................ [[32mCREATE VIEW[0m in 0.08s]
+[0m15:15:05.473262 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__rides
+[0m15:15:05.473905 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__service_types
+[0m15:15:05.474684 [info ] [Thread-1 (]: 11 of 18 START sql view model public_staging.stg_pg__service_types ............. [RUN]
+[0m15:15:05.475400 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__rides, now model.carsharing.stg_pg__service_types)
+[0m15:15:05.475945 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__service_types
+[0m15:15:05.479343 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__service_types"
+[0m15:15:05.480537 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__service_types
+[0m15:15:05.488394 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.stg_pg__service_types"
+[0m15:15:05.489850 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__service_types"
+[0m15:15:05.491795 [debug] [Thread-1 (]: On model.carsharing.stg_pg__service_types: BEGIN
+[0m15:15:05.493525 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:05.502357 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:05.503150 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__service_types"
+[0m15:15:05.503812 [debug] [Thread-1 (]: On model.carsharing.stg_pg__service_types: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__service_types"} */
+
+  create view "carsharing"."public_staging"."stg_pg__service_types__dbt_tmp"
+    
+    
+  as (
+    with source as (
+
+    select * from "carsharing"."public"."service_type"
+
+),
+
+staged as (
+
+    select * from source
+
+)
+
+select * from staged
+  );
+[0m15:15:05.589196 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:05.595542 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__service_types"
+[0m15:15:05.596281 [debug] [Thread-1 (]: On model.carsharing.stg_pg__service_types: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__service_types"} */
+alter table "carsharing"."public_staging"."stg_pg__service_types" rename to "stg_pg__service_types__dbt_backup"
+[0m15:15:05.597457 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:05.601527 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__service_types"
+[0m15:15:05.602109 [debug] [Thread-1 (]: On model.carsharing.stg_pg__service_types: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__service_types"} */
+alter table "carsharing"."public_staging"."stg_pg__service_types__dbt_tmp" rename to "stg_pg__service_types"
+[0m15:15:05.603376 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:05.605732 [debug] [Thread-1 (]: On model.carsharing.stg_pg__service_types: COMMIT
+[0m15:15:05.606412 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__service_types"
+[0m15:15:05.606963 [debug] [Thread-1 (]: On model.carsharing.stg_pg__service_types: COMMIT
+[0m15:15:05.608113 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:05.611368 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_staging"."stg_pg__service_types__dbt_backup"
+[0m15:15:05.612463 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__service_types"
+[0m15:15:05.612998 [debug] [Thread-1 (]: On model.carsharing.stg_pg__service_types: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__service_types"} */
+drop view if exists "carsharing"."public_staging"."stg_pg__service_types__dbt_backup" cascade
+[0m15:15:05.616018 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:05.618134 [debug] [Thread-1 (]: On model.carsharing.stg_pg__service_types: Close
+[0m15:15:05.618938 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eb5ab70>]}
+[0m15:15:05.619850 [info ] [Thread-1 (]: 11 of 18 OK created sql view model public_staging.stg_pg__service_types ........ [[32mCREATE VIEW[0m in 0.14s]
+[0m15:15:05.621193 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__service_types
+[0m15:15:05.621842 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__services
+[0m15:15:05.622583 [info ] [Thread-1 (]: 12 of 18 START sql view model public_staging.stg_pg__services .................. [RUN]
+[0m15:15:05.623382 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__service_types, now model.carsharing.stg_pg__services)
+[0m15:15:05.623972 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__services
+[0m15:15:05.627377 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__services"
+[0m15:15:05.628531 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__services
+[0m15:15:05.635501 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.stg_pg__services"
+[0m15:15:05.638329 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__services"
+[0m15:15:05.639392 [debug] [Thread-1 (]: On model.carsharing.stg_pg__services: BEGIN
+[0m15:15:05.640625 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:05.655575 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:05.656648 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__services"
+[0m15:15:05.658109 [debug] [Thread-1 (]: On model.carsharing.stg_pg__services: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__services"} */
+
+  create view "carsharing"."public_staging"."stg_pg__services__dbt_tmp"
+    
+    
+  as (
+    with source as (
+
+    select * from "carsharing"."public"."service"
+
+),
+
+staged as (
+
+    select
+    
+        service_id,
+        service_date as created_at,
+        service_type_id,
+        car_id    
+    
+    from source
+
+)
+
+select * from staged
+  );
+[0m15:15:05.716630 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:05.723289 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__services"
+[0m15:15:05.724176 [debug] [Thread-1 (]: On model.carsharing.stg_pg__services: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__services"} */
+alter table "carsharing"."public_staging"."stg_pg__services" rename to "stg_pg__services__dbt_backup"
+[0m15:15:05.725988 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:05.732870 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__services"
+[0m15:15:05.733996 [debug] [Thread-1 (]: On model.carsharing.stg_pg__services: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__services"} */
+alter table "carsharing"."public_staging"."stg_pg__services__dbt_tmp" rename to "stg_pg__services"
+[0m15:15:05.735912 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:05.740371 [debug] [Thread-1 (]: On model.carsharing.stg_pg__services: COMMIT
+[0m15:15:05.741382 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__services"
+[0m15:15:05.742318 [debug] [Thread-1 (]: On model.carsharing.stg_pg__services: COMMIT
+[0m15:15:05.743769 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:05.747197 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_staging"."stg_pg__services__dbt_backup"
+[0m15:15:05.748251 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.stg_pg__services"
+[0m15:15:05.748914 [debug] [Thread-1 (]: On model.carsharing.stg_pg__services: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.stg_pg__services"} */
+drop view if exists "carsharing"."public_staging"."stg_pg__services__dbt_backup" cascade
+[0m15:15:05.750722 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:05.752896 [debug] [Thread-1 (]: On model.carsharing.stg_pg__services: Close
+[0m15:15:05.753934 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eb5b8f0>]}
+[0m15:15:05.755309 [info ] [Thread-1 (]: 12 of 18 OK created sql view model public_staging.stg_pg__services ............. [[32mCREATE VIEW[0m in 0.13s]
+[0m15:15:05.756742 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__services
+[0m15:15:05.757766 [debug] [Thread-1 (]: Began running node model.carsharing.int_breakdowns_joined_to_breakdown_types
+[0m15:15:05.758825 [info ] [Thread-1 (]: 13 of 18 START sql view model public_intermediate.int_breakdowns_joined_to_breakdown_types  [RUN]
+[0m15:15:05.759821 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__services, now model.carsharing.int_breakdowns_joined_to_breakdown_types)
+[0m15:15:05.760506 [debug] [Thread-1 (]: Began compiling node model.carsharing.int_breakdowns_joined_to_breakdown_types
+[0m15:15:05.765019 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.int_breakdowns_joined_to_breakdown_types"
+[0m15:15:05.766531 [debug] [Thread-1 (]: Began executing node model.carsharing.int_breakdowns_joined_to_breakdown_types
+[0m15:15:05.789496 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.int_breakdowns_joined_to_breakdown_types"
+[0m15:15:05.800363 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_breakdowns_joined_to_breakdown_types"
+[0m15:15:05.801964 [debug] [Thread-1 (]: On model.carsharing.int_breakdowns_joined_to_breakdown_types: BEGIN
+[0m15:15:05.803377 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:05.847097 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:05.848365 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_breakdowns_joined_to_breakdown_types"
+[0m15:15:05.849545 [debug] [Thread-1 (]: On model.carsharing.int_breakdowns_joined_to_breakdown_types: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_breakdowns_joined_to_breakdown_types"} */
+
+  create view "carsharing"."public_intermediate"."int_breakdowns_joined_to_breakdown_types__dbt_tmp"
+    
+    
+  as (
+    with breakdowns as (
+
+    select 
+
+        breakdown_id,
+        created_at,
+        breakdown_type_id,
+        car_id
+
+    from "carsharing"."public_staging"."stg_pg__breakdowns"
+
+),
+
+breakdown_types as (
+
+    select
+
+        breakdown_type_id,
+        breakdown_type_text
+
+    from "carsharing"."public_staging"."stg_pg__breakdown_types"
+
+), 
+
+breakdowns_joined_to_breakdown_types as (
+
+    select
+
+        breakdowns.breakdown_id,
+        breakdowns.created_at,
+        breakdown_types.breakdown_type_text,
+        breakdowns.car_id
+
+    from breakdowns
+
+    left join breakdown_types
+    on breakdowns.breakdown_type_id = breakdown_types.breakdown_type_id
+
+)
+
+select * from breakdowns_joined_to_breakdown_types
+  );
+[0m15:15:05.864476 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:05.873424 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_breakdowns_joined_to_breakdown_types"
+[0m15:15:05.874549 [debug] [Thread-1 (]: On model.carsharing.int_breakdowns_joined_to_breakdown_types: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_breakdowns_joined_to_breakdown_types"} */
+alter table "carsharing"."public_intermediate"."int_breakdowns_joined_to_breakdown_types__dbt_tmp" rename to "int_breakdowns_joined_to_breakdown_types"
+[0m15:15:05.889991 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:05.893965 [debug] [Thread-1 (]: On model.carsharing.int_breakdowns_joined_to_breakdown_types: COMMIT
+[0m15:15:05.895540 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_breakdowns_joined_to_breakdown_types"
+[0m15:15:05.896642 [debug] [Thread-1 (]: On model.carsharing.int_breakdowns_joined_to_breakdown_types: COMMIT
+[0m15:15:05.898663 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:05.904647 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_intermediate"."int_breakdowns_joined_to_breakdown_types__dbt_backup"
+[0m15:15:05.906641 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_breakdowns_joined_to_breakdown_types"
+[0m15:15:05.907831 [debug] [Thread-1 (]: On model.carsharing.int_breakdowns_joined_to_breakdown_types: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_breakdowns_joined_to_breakdown_types"} */
+drop view if exists "carsharing"."public_intermediate"."int_breakdowns_joined_to_breakdown_types__dbt_backup" cascade
+[0m15:15:05.910342 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:05.914020 [debug] [Thread-1 (]: On model.carsharing.int_breakdowns_joined_to_breakdown_types: Close
+[0m15:15:05.915605 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eb5ab70>]}
+[0m15:15:05.917296 [info ] [Thread-1 (]: 13 of 18 OK created sql view model public_intermediate.int_breakdowns_joined_to_breakdown_types  [[32mCREATE VIEW[0m in 0.16s]
+[0m15:15:05.918928 [debug] [Thread-1 (]: Finished running node model.carsharing.int_breakdowns_joined_to_breakdown_types
+[0m15:15:05.919740 [debug] [Thread-1 (]: Began running node model.carsharing.int_cars_joined_to_categories
+[0m15:15:05.921493 [info ] [Thread-1 (]: 14 of 18 START sql view model public_intermediate.int_cars_joined_to_categories  [RUN]
+[0m15:15:05.922551 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.int_breakdowns_joined_to_breakdown_types, now model.carsharing.int_cars_joined_to_categories)
+[0m15:15:05.923451 [debug] [Thread-1 (]: Began compiling node model.carsharing.int_cars_joined_to_categories
+[0m15:15:05.929752 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.int_cars_joined_to_categories"
+[0m15:15:05.931843 [debug] [Thread-1 (]: Began executing node model.carsharing.int_cars_joined_to_categories
+[0m15:15:06.070935 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.int_cars_joined_to_categories"
+[0m15:15:06.072858 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_cars_joined_to_categories"
+[0m15:15:06.073776 [debug] [Thread-1 (]: On model.carsharing.int_cars_joined_to_categories: BEGIN
+[0m15:15:06.074623 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:06.088950 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:06.090017 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_cars_joined_to_categories"
+[0m15:15:06.091087 [debug] [Thread-1 (]: On model.carsharing.int_cars_joined_to_categories: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_cars_joined_to_categories"} */
+
+  create view "carsharing"."public_intermediate"."int_cars_joined_to_categories__dbt_tmp"
+    
+    
+  as (
+    with cars as (
+
+    select 
+
+        car_id, 
+        brand, 
+        model, 
+        category_id, 
+        car_year, 
+        vin, 
+        licence_plate, 
+        mileage
+
+    from "carsharing"."public_staging"."stg_pg__cars"
+
+),
+
+categories as (
+
+    select
+
+        category_id, 
+        category_text, 
+        rate
+
+    from "carsharing"."public_staging"."stg_pg__categories"
+
+), 
+
+cars_joined_to_categories as (
+
+    select
+
+        cars.car_id, 
+        cars.brand, 
+        cars.model, 
+        categories.category_text, 
+        categories.rate,
+        cars.car_year, 
+        cars.vin, 
+        cars.licence_plate, 
+        cars.mileage
+
+    from cars
+
+    left join categories
+    on cars.category_id = categories.category_id
+
+)
+
+select * from cars_joined_to_categories
+  );
+[0m15:15:06.168904 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:06.174910 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_cars_joined_to_categories"
+[0m15:15:06.175609 [debug] [Thread-1 (]: On model.carsharing.int_cars_joined_to_categories: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_cars_joined_to_categories"} */
+alter table "carsharing"."public_intermediate"."int_cars_joined_to_categories__dbt_tmp" rename to "int_cars_joined_to_categories"
+[0m15:15:06.176699 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:06.179452 [debug] [Thread-1 (]: On model.carsharing.int_cars_joined_to_categories: COMMIT
+[0m15:15:06.180120 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_cars_joined_to_categories"
+[0m15:15:06.180702 [debug] [Thread-1 (]: On model.carsharing.int_cars_joined_to_categories: COMMIT
+[0m15:15:06.182007 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:06.185580 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_intermediate"."int_cars_joined_to_categories__dbt_backup"
+[0m15:15:06.186899 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_cars_joined_to_categories"
+[0m15:15:06.187890 [debug] [Thread-1 (]: On model.carsharing.int_cars_joined_to_categories: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_cars_joined_to_categories"} */
+drop view if exists "carsharing"."public_intermediate"."int_cars_joined_to_categories__dbt_backup" cascade
+[0m15:15:06.188939 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:06.191704 [debug] [Thread-1 (]: On model.carsharing.int_cars_joined_to_categories: Close
+[0m15:15:06.192796 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c61ede0>]}
+[0m15:15:06.193956 [info ] [Thread-1 (]: 14 of 18 OK created sql view model public_intermediate.int_cars_joined_to_categories  [[32mCREATE VIEW[0m in 0.27s]
+[0m15:15:06.195365 [debug] [Thread-1 (]: Finished running node model.carsharing.int_cars_joined_to_categories
+[0m15:15:06.196228 [debug] [Thread-1 (]: Began running node model.carsharing.int_customers_name_concatenated
+[0m15:15:06.197276 [info ] [Thread-1 (]: 15 of 18 START sql view model public_intermediate.int_customers_name_concatenated  [RUN]
+[0m15:15:06.198204 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.int_cars_joined_to_categories, now model.carsharing.int_customers_name_concatenated)
+[0m15:15:06.198965 [debug] [Thread-1 (]: Began compiling node model.carsharing.int_customers_name_concatenated
+[0m15:15:06.204202 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.int_customers_name_concatenated"
+[0m15:15:06.205660 [debug] [Thread-1 (]: Began executing node model.carsharing.int_customers_name_concatenated
+[0m15:15:06.211457 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.int_customers_name_concatenated"
+[0m15:15:06.212747 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_customers_name_concatenated"
+[0m15:15:06.213613 [debug] [Thread-1 (]: On model.carsharing.int_customers_name_concatenated: BEGIN
+[0m15:15:06.214520 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:06.232671 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:06.234355 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_customers_name_concatenated"
+[0m15:15:06.235499 [debug] [Thread-1 (]: On model.carsharing.int_customers_name_concatenated: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_customers_name_concatenated"} */
+
+  create view "carsharing"."public_intermediate"."int_customers_name_concatenated__dbt_tmp"
+    
+    
+  as (
+    with customers as (
+
+    select
+
+        customer_id, 
+        concat(first_name,' ',last_name) as full_name, 
+        gender, 
+        driving_licence_number, 
+        driving_licence_valid_from, 
+        phone, 
+        email, 
+        updated_at
+
+    from "carsharing"."public_staging"."stg_pg__customers"
+
+)
+
+select * from customers
+  );
+[0m15:15:06.241896 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:06.249741 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_customers_name_concatenated"
+[0m15:15:06.250763 [debug] [Thread-1 (]: On model.carsharing.int_customers_name_concatenated: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_customers_name_concatenated"} */
+alter table "carsharing"."public_intermediate"."int_customers_name_concatenated__dbt_tmp" rename to "int_customers_name_concatenated"
+[0m15:15:06.252334 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:06.255717 [debug] [Thread-1 (]: On model.carsharing.int_customers_name_concatenated: COMMIT
+[0m15:15:06.256566 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_customers_name_concatenated"
+[0m15:15:06.258266 [debug] [Thread-1 (]: On model.carsharing.int_customers_name_concatenated: COMMIT
+[0m15:15:06.261536 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:06.267592 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_intermediate"."int_customers_name_concatenated__dbt_backup"
+[0m15:15:06.268923 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_customers_name_concatenated"
+[0m15:15:06.269575 [debug] [Thread-1 (]: On model.carsharing.int_customers_name_concatenated: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_customers_name_concatenated"} */
+drop view if exists "carsharing"."public_intermediate"."int_customers_name_concatenated__dbt_backup" cascade
+[0m15:15:06.271562 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:06.276909 [debug] [Thread-1 (]: On model.carsharing.int_customers_name_concatenated: Close
+[0m15:15:06.277996 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eb25f40>]}
+[0m15:15:06.278950 [info ] [Thread-1 (]: 15 of 18 OK created sql view model public_intermediate.int_customers_name_concatenated  [[32mCREATE VIEW[0m in 0.08s]
+[0m15:15:06.279881 [debug] [Thread-1 (]: Finished running node model.carsharing.int_customers_name_concatenated
+[0m15:15:06.280773 [debug] [Thread-1 (]: Began running node model.carsharing.int_breakdowns_joined_to_cars
+[0m15:15:06.281771 [info ] [Thread-1 (]: 16 of 18 START sql view model public_intermediate.int_breakdowns_joined_to_cars  [RUN]
+[0m15:15:06.282706 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.int_customers_name_concatenated, now model.carsharing.int_breakdowns_joined_to_cars)
+[0m15:15:06.283381 [debug] [Thread-1 (]: Began compiling node model.carsharing.int_breakdowns_joined_to_cars
+[0m15:15:06.288290 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.int_breakdowns_joined_to_cars"
+[0m15:15:06.299083 [debug] [Thread-1 (]: Began executing node model.carsharing.int_breakdowns_joined_to_cars
+[0m15:15:06.303642 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.int_breakdowns_joined_to_cars"
+[0m15:15:06.305243 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_breakdowns_joined_to_cars"
+[0m15:15:06.306502 [debug] [Thread-1 (]: On model.carsharing.int_breakdowns_joined_to_cars: BEGIN
+[0m15:15:06.307311 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:06.322359 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:06.323825 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_breakdowns_joined_to_cars"
+[0m15:15:06.329412 [debug] [Thread-1 (]: On model.carsharing.int_breakdowns_joined_to_cars: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_breakdowns_joined_to_cars"} */
+
+  create view "carsharing"."public_intermediate"."int_breakdowns_joined_to_cars__dbt_tmp"
+    
+    
+  as (
+    with breakdowns as (
+
+    select 
+
+        breakdown_id, 
+        created_at, 
+        breakdown_type_text, 
+        car_id
+
+    from "carsharing"."public_intermediate"."int_breakdowns_joined_to_breakdown_types"
+
+),
+
+cars as (
+
+    select
+
+        car_id, 
+        brand, 
+        model, 
+        category_text 
+
+    from "carsharing"."public_intermediate"."int_cars_joined_to_categories"
+
+), 
+
+breakdowns_joined_to_cars as (
+
+    select
+
+        breakdowns.breakdown_id, 
+        breakdowns.created_at, 
+        breakdowns.breakdown_type_text, 
+        breakdowns.car_id,
+        cars.brand, 
+        cars.model, 
+        cars.category_text 
+
+    from breakdowns
+
+    left join cars
+    on breakdowns.car_id = cars.car_id
+
+)
+
+select * from breakdowns_joined_to_cars
+  );
+[0m15:15:06.419251 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:06.423673 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_breakdowns_joined_to_cars"
+[0m15:15:06.424375 [debug] [Thread-1 (]: On model.carsharing.int_breakdowns_joined_to_cars: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_breakdowns_joined_to_cars"} */
+alter table "carsharing"."public_intermediate"."int_breakdowns_joined_to_cars__dbt_tmp" rename to "int_breakdowns_joined_to_cars"
+[0m15:15:06.425637 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:06.428021 [debug] [Thread-1 (]: On model.carsharing.int_breakdowns_joined_to_cars: COMMIT
+[0m15:15:06.428762 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_breakdowns_joined_to_cars"
+[0m15:15:06.429366 [debug] [Thread-1 (]: On model.carsharing.int_breakdowns_joined_to_cars: COMMIT
+[0m15:15:06.463377 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:06.468076 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_intermediate"."int_breakdowns_joined_to_cars__dbt_backup"
+[0m15:15:06.469564 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_breakdowns_joined_to_cars"
+[0m15:15:06.470751 [debug] [Thread-1 (]: On model.carsharing.int_breakdowns_joined_to_cars: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_breakdowns_joined_to_cars"} */
+drop view if exists "carsharing"."public_intermediate"."int_breakdowns_joined_to_cars__dbt_backup" cascade
+[0m15:15:06.472860 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:06.477155 [debug] [Thread-1 (]: On model.carsharing.int_breakdowns_joined_to_cars: Close
+[0m15:15:06.478267 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e4de8a0>]}
+[0m15:15:06.479213 [info ] [Thread-1 (]: 16 of 18 OK created sql view model public_intermediate.int_breakdowns_joined_to_cars  [[32mCREATE VIEW[0m in 0.20s]
+[0m15:15:06.480499 [debug] [Thread-1 (]: Finished running node model.carsharing.int_breakdowns_joined_to_cars
+[0m15:15:06.481220 [debug] [Thread-1 (]: Began running node model.carsharing.int_bookings_joined_to_customers_and_cars
+[0m15:15:06.482133 [info ] [Thread-1 (]: 17 of 18 START sql view model public_intermediate.int_bookings_joined_to_customers_and_cars  [RUN]
+[0m15:15:06.482871 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.int_breakdowns_joined_to_cars, now model.carsharing.int_bookings_joined_to_customers_and_cars)
+[0m15:15:06.483456 [debug] [Thread-1 (]: Began compiling node model.carsharing.int_bookings_joined_to_customers_and_cars
+[0m15:15:06.487971 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.int_bookings_joined_to_customers_and_cars"
+[0m15:15:06.489225 [debug] [Thread-1 (]: Began executing node model.carsharing.int_bookings_joined_to_customers_and_cars
+[0m15:15:06.502186 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.int_bookings_joined_to_customers_and_cars"
+[0m15:15:06.503440 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_bookings_joined_to_customers_and_cars"
+[0m15:15:06.504131 [debug] [Thread-1 (]: On model.carsharing.int_bookings_joined_to_customers_and_cars: BEGIN
+[0m15:15:06.504758 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:06.518391 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:06.519232 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_bookings_joined_to_customers_and_cars"
+[0m15:15:06.522873 [debug] [Thread-1 (]: On model.carsharing.int_bookings_joined_to_customers_and_cars: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_bookings_joined_to_customers_and_cars"} */
+
+  create view "carsharing"."public_intermediate"."int_bookings_joined_to_customers_and_cars__dbt_tmp"
+    
+    
+  as (
+    with bookings as (
+
+    select 
+
+        booking_id,
+        created_at,
+        customer_id,
+        car_id
+
+    from "carsharing"."public_staging"."stg_pg__bookings"
+
+),
+
+customers as (
+
+    select
+
+        customer_id, 
+        full_name, 
+        gender, 
+        driving_licence_number, 
+        driving_licence_valid_from, 
+        phone, 
+        email, 
+        updated_at
+
+    from "carsharing"."public_intermediate"."int_customers_name_concatenated"
+
+),
+
+cars as (
+
+    select 
+
+        car_id, 
+        brand, 
+        model, 
+        category_text, 
+        rate,
+        car_year, 
+        vin, 
+        licence_plate, 
+        mileage
+
+    from "carsharing"."public_intermediate"."int_cars_joined_to_categories"
+
+),
+
+bookings_joined_to_customers_and_cars as (
+
+    select
+
+        bookings.booking_id,
+        bookings.created_at,
+        customers.customer_id, 
+        customers.full_name, 
+        customers.gender,
+        cars.car_id,
+        cars.brand, 
+        cars.model, 
+        cars.category_text, 
+        cars.rate
+
+    from bookings
+
+    left join customers
+    on bookings.customer_id = customers.customer_id
+
+    left join cars
+    on bookings.car_id = cars.car_id
+
+)
+
+select * from bookings_joined_to_customers_and_cars
+  );
+[0m15:15:06.538705 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:06.545385 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_bookings_joined_to_customers_and_cars"
+[0m15:15:06.548154 [debug] [Thread-1 (]: On model.carsharing.int_bookings_joined_to_customers_and_cars: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_bookings_joined_to_customers_and_cars"} */
+alter table "carsharing"."public_intermediate"."int_bookings_joined_to_customers_and_cars__dbt_tmp" rename to "int_bookings_joined_to_customers_and_cars"
+[0m15:15:06.549666 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:06.551774 [debug] [Thread-1 (]: On model.carsharing.int_bookings_joined_to_customers_and_cars: COMMIT
+[0m15:15:06.552352 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_bookings_joined_to_customers_and_cars"
+[0m15:15:06.552883 [debug] [Thread-1 (]: On model.carsharing.int_bookings_joined_to_customers_and_cars: COMMIT
+[0m15:15:06.554084 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:06.557931 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_intermediate"."int_bookings_joined_to_customers_and_cars__dbt_backup"
+[0m15:15:06.559100 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_bookings_joined_to_customers_and_cars"
+[0m15:15:06.559692 [debug] [Thread-1 (]: On model.carsharing.int_bookings_joined_to_customers_and_cars: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_bookings_joined_to_customers_and_cars"} */
+drop view if exists "carsharing"."public_intermediate"."int_bookings_joined_to_customers_and_cars__dbt_backup" cascade
+[0m15:15:06.560547 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:06.562648 [debug] [Thread-1 (]: On model.carsharing.int_bookings_joined_to_customers_and_cars: Close
+[0m15:15:06.563554 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eb8fbc0>]}
+[0m15:15:06.564437 [info ] [Thread-1 (]: 17 of 18 OK created sql view model public_intermediate.int_bookings_joined_to_customers_and_cars  [[32mCREATE VIEW[0m in 0.08s]
+[0m15:15:06.565703 [debug] [Thread-1 (]: Finished running node model.carsharing.int_bookings_joined_to_customers_and_cars
+[0m15:15:06.566794 [debug] [Thread-1 (]: Began running node model.carsharing.int_payments_joined_to_bookings
+[0m15:15:06.567709 [info ] [Thread-1 (]: 18 of 18 START sql view model public_intermediate.int_payments_joined_to_bookings  [RUN]
+[0m15:15:06.568457 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.int_bookings_joined_to_customers_and_cars, now model.carsharing.int_payments_joined_to_bookings)
+[0m15:15:06.569094 [debug] [Thread-1 (]: Began compiling node model.carsharing.int_payments_joined_to_bookings
+[0m15:15:06.573799 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.int_payments_joined_to_bookings"
+[0m15:15:06.575237 [debug] [Thread-1 (]: Began executing node model.carsharing.int_payments_joined_to_bookings
+[0m15:15:06.581684 [debug] [Thread-1 (]: Writing runtime sql for node "model.carsharing.int_payments_joined_to_bookings"
+[0m15:15:06.585783 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_payments_joined_to_bookings"
+[0m15:15:06.586514 [debug] [Thread-1 (]: On model.carsharing.int_payments_joined_to_bookings: BEGIN
+[0m15:15:06.587259 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:15:06.600343 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:06.601176 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_payments_joined_to_bookings"
+[0m15:15:06.601777 [debug] [Thread-1 (]: On model.carsharing.int_payments_joined_to_bookings: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_payments_joined_to_bookings"} */
+
+  create view "carsharing"."public_intermediate"."int_payments_joined_to_bookings__dbt_tmp"
+    
+    
+  as (
+    with payments as (
+
+    select 
+
+        payment_id, 
+        created_at, 
+        booking_id, 
+        amount
+
+    from "carsharing"."public_staging"."stg_pg__payments"
+
+),
+
+bookings as (
+
+    select
+
+        booking_id, 
+        created_at, 
+        customer_id,
+        full_name, 
+        gender,
+        car_id, 
+        brand, 
+        model, 
+        category_text, 
+        rate
+
+    from "carsharing"."public_intermediate"."int_bookings_joined_to_customers_and_cars"
+
+),
+
+payments_joined_to_bookings as(
+
+    select 
+
+        payments.payment_id, 
+        payments.created_at, 
+        bookings.booking_id, 
+        bookings.customer_id,
+        bookings.full_name, 
+        bookings.gender, 
+        bookings.car_id, 
+        bookings.brand, 
+        bookings.model, 
+        bookings.category_text,
+        payments.amount
+
+    from payments
+
+    left join bookings
+    on payments.booking_id = bookings.booking_id
+
+)
+
+select * from payments_joined_to_bookings
+  );
+[0m15:15:06.616118 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:15:06.620889 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_payments_joined_to_bookings"
+[0m15:15:06.621529 [debug] [Thread-1 (]: On model.carsharing.int_payments_joined_to_bookings: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_payments_joined_to_bookings"} */
+alter table "carsharing"."public_intermediate"."int_payments_joined_to_bookings__dbt_tmp" rename to "int_payments_joined_to_bookings"
+[0m15:15:06.622986 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:15:06.625260 [debug] [Thread-1 (]: On model.carsharing.int_payments_joined_to_bookings: COMMIT
+[0m15:15:06.626229 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_payments_joined_to_bookings"
+[0m15:15:06.627196 [debug] [Thread-1 (]: On model.carsharing.int_payments_joined_to_bookings: COMMIT
+[0m15:15:06.629845 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:06.633730 [debug] [Thread-1 (]: Applying DROP to: "carsharing"."public_intermediate"."int_payments_joined_to_bookings__dbt_backup"
+[0m15:15:06.634802 [debug] [Thread-1 (]: Using postgres connection "model.carsharing.int_payments_joined_to_bookings"
+[0m15:15:06.635392 [debug] [Thread-1 (]: On model.carsharing.int_payments_joined_to_bookings: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "node_id": "model.carsharing.int_payments_joined_to_bookings"} */
+drop view if exists "carsharing"."public_intermediate"."int_payments_joined_to_bookings__dbt_backup" cascade
+[0m15:15:06.636433 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:15:06.638353 [debug] [Thread-1 (]: On model.carsharing.int_payments_joined_to_bookings: Close
+[0m15:15:06.639153 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2ab528a7-937b-4091-b073-54d215f75a4d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eb8dd00>]}
+[0m15:15:06.640063 [info ] [Thread-1 (]: 18 of 18 OK created sql view model public_intermediate.int_payments_joined_to_bookings  [[32mCREATE VIEW[0m in 0.07s]
+[0m15:15:06.641330 [debug] [Thread-1 (]: Finished running node model.carsharing.int_payments_joined_to_bookings
+[0m15:15:06.643334 [debug] [MainThread]: Using postgres connection "master"
+[0m15:15:06.643945 [debug] [MainThread]: On master: BEGIN
+[0m15:15:06.644412 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:15:06.652646 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:15:06.653242 [debug] [MainThread]: On master: COMMIT
+[0m15:15:06.653702 [debug] [MainThread]: Using postgres connection "master"
+[0m15:15:06.654149 [debug] [MainThread]: On master: COMMIT
+[0m15:15:06.655194 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m15:15:06.655746 [debug] [MainThread]: On master: Close
+[0m15:15:06.656512 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:15:06.656996 [debug] [MainThread]: Connection 'model.carsharing.int_payments_joined_to_bookings' was properly closed.
+[0m15:15:06.657689 [info ] [MainThread]: 
+[0m15:15:06.658692 [info ] [MainThread]: Finished running 18 view models in 0 hours 0 minutes and 3.05 seconds (3.05s).
+[0m15:15:06.664078 [debug] [MainThread]: Command end result
+[0m15:15:06.731462 [info ] [MainThread]: 
+[0m15:15:06.732331 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:15:06.732953 [info ] [MainThread]: 
+[0m15:15:06.733642 [info ] [MainThread]: Done. PASS=18 WARN=0 ERROR=0 SKIP=0 TOTAL=18
+[0m15:15:06.789232 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.0877748, "process_user_time": 4.120894, "process_kernel_time": 0.88389, "process_mem_max_rss": "107413504", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:15:06.791445 [debug] [MainThread]: Command `dbt run` succeeded at 15:15:06.791080 after 5.09 seconds
+[0m15:15:06.793362 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eb73650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eb71460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eb71370>]}
+[0m15:15:06.799274 [debug] [MainThread]: Flushing usage events
+[0m16:57:25.802717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077ff4a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c08cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089a2600>]}
+
+
+============================== 16:57:25.811463 | 13feac88-49d8-4b6b-adfb-d5aa19de69ed ==============================
+[0m16:57:25.811463 [info ] [MainThread]: Running with dbt=1.8.2
+[0m16:57:25.812629 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/vovix/Documents/Projects/AE book/carsharing/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/vovix/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt docs generate', 'send_anonymous_usage_stats': 'True'}
+[0m16:57:26.127997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '13feac88-49d8-4b6b-adfb-d5aa19de69ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089c9040>]}
+[0m16:57:26.262081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '13feac88-49d8-4b6b-adfb-d5aa19de69ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a7ce90>]}
+[0m16:57:26.264182 [info ] [MainThread]: Registered adapter: postgres=1.8.1
+[0m16:57:26.293454 [debug] [MainThread]: checksum: f0a141b9de567cb7f131613ba2682f40b3a1c6a157f81c6e5435862eff68f109, vars: {}, profile: , target: , version: 1.8.2
+[0m16:57:26.523584 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:57:26.524159 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:57:26.532002 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.carsharing.marts
+[0m16:57:26.576729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '13feac88-49d8-4b6b-adfb-d5aa19de69ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109242ae0>]}
+[0m16:57:26.620778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '13feac88-49d8-4b6b-adfb-d5aa19de69ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094e1940>]}
+[0m16:57:26.621644 [info ] [MainThread]: Found 18 models, 12 sources, 413 macros
+[0m16:57:26.622222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '13feac88-49d8-4b6b-adfb-d5aa19de69ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092a80e0>]}
+[0m16:57:26.625300 [info ] [MainThread]: 
+[0m16:57:26.626190 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:57:26.635446 [debug] [ThreadPool]: Acquiring new postgres connection 'list_carsharing_public_intermediate'
+[0m16:57:26.733155 [debug] [ThreadPool]: Using postgres connection "list_carsharing_public_intermediate"
+[0m16:57:26.733789 [debug] [ThreadPool]: On list_carsharing_public_intermediate: BEGIN
+[0m16:57:26.734421 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:57:26.898024 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m16:57:26.899026 [debug] [ThreadPool]: Using postgres connection "list_carsharing_public_intermediate"
+[0m16:57:26.899637 [debug] [ThreadPool]: On list_carsharing_public_intermediate: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "connection_name": "list_carsharing_public_intermediate"} */
+select
+      'carsharing' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'carsharing' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_intermediate'
+    union all
+    select
+      'carsharing' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_intermediate'
+  
+[0m16:57:26.905956 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.0 seconds
+[0m16:57:26.908174 [debug] [ThreadPool]: On list_carsharing_public_intermediate: ROLLBACK
+[0m16:57:26.908892 [debug] [ThreadPool]: On list_carsharing_public_intermediate: Close
+[0m16:57:26.909760 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_carsharing_public_intermediate, now list_carsharing_public_staging)
+[0m16:57:26.914571 [debug] [ThreadPool]: Using postgres connection "list_carsharing_public_staging"
+[0m16:57:26.915125 [debug] [ThreadPool]: On list_carsharing_public_staging: BEGIN
+[0m16:57:26.915568 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:57:26.921714 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m16:57:26.922411 [debug] [ThreadPool]: Using postgres connection "list_carsharing_public_staging"
+[0m16:57:26.922960 [debug] [ThreadPool]: On list_carsharing_public_staging: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "connection_name": "list_carsharing_public_staging"} */
+select
+      'carsharing' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'carsharing' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'carsharing' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m16:57:26.927639 [debug] [ThreadPool]: SQL status: SELECT 12 in 0.0 seconds
+[0m16:57:26.929597 [debug] [ThreadPool]: On list_carsharing_public_staging: ROLLBACK
+[0m16:57:26.930253 [debug] [ThreadPool]: On list_carsharing_public_staging: Close
+[0m16:57:26.940423 [debug] [MainThread]: Using postgres connection "master"
+[0m16:57:26.940997 [debug] [MainThread]: On master: BEGIN
+[0m16:57:26.941441 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:57:26.948222 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m16:57:26.948814 [debug] [MainThread]: Using postgres connection "master"
+[0m16:57:26.949370 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m16:57:26.988080 [debug] [MainThread]: SQL status: SELECT 24 in 0.0 seconds
+[0m16:57:26.993615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '13feac88-49d8-4b6b-adfb-d5aa19de69ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a7e7b0>]}
+[0m16:57:26.994224 [debug] [MainThread]: On master: ROLLBACK
+[0m16:57:26.994911 [debug] [MainThread]: On master: Close
+[0m16:57:26.995777 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:57:26.996489 [info ] [MainThread]: 
+[0m16:57:27.001509 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__accidents
+[0m16:57:27.002339 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_carsharing_public_staging, now model.carsharing.stg_pg__accidents)
+[0m16:57:27.002881 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__accidents
+[0m16:57:27.015281 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__accidents"
+[0m16:57:27.018324 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__accidents
+[0m16:57:27.019694 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__accidents
+[0m16:57:27.020388 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__bookings
+[0m16:57:27.021095 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__accidents, now model.carsharing.stg_pg__bookings)
+[0m16:57:27.021622 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__bookings
+[0m16:57:27.024960 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__bookings"
+[0m16:57:27.027382 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__bookings
+[0m16:57:27.029315 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__bookings
+[0m16:57:27.030356 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__breakdown_types
+[0m16:57:27.031743 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__bookings, now model.carsharing.stg_pg__breakdown_types)
+[0m16:57:27.033231 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__breakdown_types
+[0m16:57:27.036896 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__breakdown_types"
+[0m16:57:27.038374 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__breakdown_types
+[0m16:57:27.039528 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__breakdown_types
+[0m16:57:27.040147 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__breakdowns
+[0m16:57:27.040792 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__breakdown_types, now model.carsharing.stg_pg__breakdowns)
+[0m16:57:27.041325 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__breakdowns
+[0m16:57:27.044755 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__breakdowns"
+[0m16:57:27.046877 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__breakdowns
+[0m16:57:27.048158 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__breakdowns
+[0m16:57:27.048987 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__cars
+[0m16:57:27.049991 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__breakdowns, now model.carsharing.stg_pg__cars)
+[0m16:57:27.050665 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__cars
+[0m16:57:27.053846 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__cars"
+[0m16:57:27.055763 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__cars
+[0m16:57:27.057346 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__cars
+[0m16:57:27.058052 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__categories
+[0m16:57:27.058743 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__cars, now model.carsharing.stg_pg__categories)
+[0m16:57:27.059320 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__categories
+[0m16:57:27.062774 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__categories"
+[0m16:57:27.064021 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__categories
+[0m16:57:27.065044 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__categories
+[0m16:57:27.065647 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__customers
+[0m16:57:27.066684 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__categories, now model.carsharing.stg_pg__customers)
+[0m16:57:27.067923 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__customers
+[0m16:57:27.073155 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__customers"
+[0m16:57:27.074249 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__customers
+[0m16:57:27.075254 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__customers
+[0m16:57:27.075858 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__locations
+[0m16:57:27.076522 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__customers, now model.carsharing.stg_pg__locations)
+[0m16:57:27.077236 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__locations
+[0m16:57:27.080498 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__locations"
+[0m16:57:27.081454 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__locations
+[0m16:57:27.082453 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__locations
+[0m16:57:27.083288 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__payments
+[0m16:57:27.083945 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__locations, now model.carsharing.stg_pg__payments)
+[0m16:57:27.084485 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__payments
+[0m16:57:27.088123 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__payments"
+[0m16:57:27.089094 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__payments
+[0m16:57:27.090095 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__payments
+[0m16:57:27.090699 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__rides
+[0m16:57:27.091328 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__payments, now model.carsharing.stg_pg__rides)
+[0m16:57:27.091850 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__rides
+[0m16:57:27.095205 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__rides"
+[0m16:57:27.097449 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__rides
+[0m16:57:27.098706 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__rides
+[0m16:57:27.099846 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__service_types
+[0m16:57:27.100723 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__rides, now model.carsharing.stg_pg__service_types)
+[0m16:57:27.101405 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__service_types
+[0m16:57:27.105210 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__service_types"
+[0m16:57:27.106295 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__service_types
+[0m16:57:27.107322 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__service_types
+[0m16:57:27.108242 [debug] [Thread-1 (]: Began running node model.carsharing.stg_pg__services
+[0m16:57:27.109628 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__service_types, now model.carsharing.stg_pg__services)
+[0m16:57:27.110681 [debug] [Thread-1 (]: Began compiling node model.carsharing.stg_pg__services
+[0m16:57:27.114316 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.stg_pg__services"
+[0m16:57:27.115813 [debug] [Thread-1 (]: Began executing node model.carsharing.stg_pg__services
+[0m16:57:27.119933 [debug] [Thread-1 (]: Finished running node model.carsharing.stg_pg__services
+[0m16:57:27.120900 [debug] [Thread-1 (]: Began running node model.carsharing.int_breakdowns_joined_to_breakdown_types
+[0m16:57:27.121659 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.stg_pg__services, now model.carsharing.int_breakdowns_joined_to_breakdown_types)
+[0m16:57:27.122258 [debug] [Thread-1 (]: Began compiling node model.carsharing.int_breakdowns_joined_to_breakdown_types
+[0m16:57:27.126283 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.int_breakdowns_joined_to_breakdown_types"
+[0m16:57:27.128894 [debug] [Thread-1 (]: Began executing node model.carsharing.int_breakdowns_joined_to_breakdown_types
+[0m16:57:27.130285 [debug] [Thread-1 (]: Finished running node model.carsharing.int_breakdowns_joined_to_breakdown_types
+[0m16:57:27.131131 [debug] [Thread-1 (]: Began running node model.carsharing.int_cars_joined_to_categories
+[0m16:57:27.132183 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.int_breakdowns_joined_to_breakdown_types, now model.carsharing.int_cars_joined_to_categories)
+[0m16:57:27.133149 [debug] [Thread-1 (]: Began compiling node model.carsharing.int_cars_joined_to_categories
+[0m16:57:27.139444 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.int_cars_joined_to_categories"
+[0m16:57:27.141118 [debug] [Thread-1 (]: Began executing node model.carsharing.int_cars_joined_to_categories
+[0m16:57:27.142406 [debug] [Thread-1 (]: Finished running node model.carsharing.int_cars_joined_to_categories
+[0m16:57:27.143536 [debug] [Thread-1 (]: Began running node model.carsharing.int_customers_name_concatenated
+[0m16:57:27.144730 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.int_cars_joined_to_categories, now model.carsharing.int_customers_name_concatenated)
+[0m16:57:27.145423 [debug] [Thread-1 (]: Began compiling node model.carsharing.int_customers_name_concatenated
+[0m16:57:27.149085 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.int_customers_name_concatenated"
+[0m16:57:27.150642 [debug] [Thread-1 (]: Began executing node model.carsharing.int_customers_name_concatenated
+[0m16:57:27.152128 [debug] [Thread-1 (]: Finished running node model.carsharing.int_customers_name_concatenated
+[0m16:57:27.152904 [debug] [Thread-1 (]: Began running node model.carsharing.int_breakdowns_joined_to_cars
+[0m16:57:27.154013 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.int_customers_name_concatenated, now model.carsharing.int_breakdowns_joined_to_cars)
+[0m16:57:27.155013 [debug] [Thread-1 (]: Began compiling node model.carsharing.int_breakdowns_joined_to_cars
+[0m16:57:27.159055 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.int_breakdowns_joined_to_cars"
+[0m16:57:27.160094 [debug] [Thread-1 (]: Began executing node model.carsharing.int_breakdowns_joined_to_cars
+[0m16:57:27.161158 [debug] [Thread-1 (]: Finished running node model.carsharing.int_breakdowns_joined_to_cars
+[0m16:57:27.161794 [debug] [Thread-1 (]: Began running node model.carsharing.int_bookings_joined_to_customers_and_cars
+[0m16:57:27.162496 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.int_breakdowns_joined_to_cars, now model.carsharing.int_bookings_joined_to_customers_and_cars)
+[0m16:57:27.163041 [debug] [Thread-1 (]: Began compiling node model.carsharing.int_bookings_joined_to_customers_and_cars
+[0m16:57:27.167555 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.int_bookings_joined_to_customers_and_cars"
+[0m16:57:27.168542 [debug] [Thread-1 (]: Began executing node model.carsharing.int_bookings_joined_to_customers_and_cars
+[0m16:57:27.169548 [debug] [Thread-1 (]: Finished running node model.carsharing.int_bookings_joined_to_customers_and_cars
+[0m16:57:27.170576 [debug] [Thread-1 (]: Began running node model.carsharing.int_payments_joined_to_bookings
+[0m16:57:27.171504 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.carsharing.int_bookings_joined_to_customers_and_cars, now model.carsharing.int_payments_joined_to_bookings)
+[0m16:57:27.172369 [debug] [Thread-1 (]: Began compiling node model.carsharing.int_payments_joined_to_bookings
+[0m16:57:27.176971 [debug] [Thread-1 (]: Writing injected SQL for node "model.carsharing.int_payments_joined_to_bookings"
+[0m16:57:27.178291 [debug] [Thread-1 (]: Began executing node model.carsharing.int_payments_joined_to_bookings
+[0m16:57:27.179482 [debug] [Thread-1 (]: Finished running node model.carsharing.int_payments_joined_to_bookings
+[0m16:57:27.180859 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:57:27.181433 [debug] [MainThread]: Connection 'model.carsharing.int_payments_joined_to_bookings' was properly closed.
+[0m16:57:27.185672 [debug] [MainThread]: Command end result
+[0m16:57:27.297931 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m16:57:27.298550 [info ] [MainThread]: Building catalog
+[0m16:57:27.322348 [debug] [ThreadPool]: Acquiring new postgres connection 'carsharing.information_schema'
+[0m16:57:27.348197 [debug] [ThreadPool]: Using postgres connection "carsharing.information_schema"
+[0m16:57:27.349249 [debug] [ThreadPool]: On carsharing.information_schema: BEGIN
+[0m16:57:27.350298 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:57:27.357170 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m16:57:27.357824 [debug] [ThreadPool]: Using postgres connection "carsharing.information_schema"
+[0m16:57:27.358555 [debug] [ThreadPool]: On carsharing.information_schema: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "carsharing", "target_name": "dev", "connection_name": "carsharing.information_schema"} */
+
+    
+    
+
+    select
+        'carsharing' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('public_staging') and
+           upper(tbl.relname) = upper('stg_pg__rides')) or (upper(sch.nspname) = upper('public_staging') and
+           upper(tbl.relname) = upper('stg_pg__accidents')) or (upper(sch.nspname) = upper('public_staging') and
+           upper(tbl.relname) = upper('stg_pg__payments')) or (upper(sch.nspname) = upper('public_intermediate') and
+           upper(tbl.relname) = upper('int_breakdowns_joined_to_breakdown_types')) or (upper(sch.nspname) = upper('public_staging') and
+           upper(tbl.relname) = upper('stg_pg__breakdown_types')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('ride')) or (upper(sch.nspname) = upper('public_staging') and
+           upper(tbl.relname) = upper('stg_pg__bookings')) or (upper(sch.nspname) = upper('public_intermediate') and
+           upper(tbl.relname) = upper('int_bookings_joined_to_customers_and_cars')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('breakdown_type')) or (upper(sch.nspname) = upper('public_staging') and
+           upper(tbl.relname) = upper('stg_pg__services')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('service_type')) or (upper(sch.nspname) = upper('public_staging') and
+           upper(tbl.relname) = upper('stg_pg__customers')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('payment')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('accident')) or (upper(sch.nspname) = upper('public_intermediate') and
+           upper(tbl.relname) = upper('int_cars_joined_to_categories')) or (upper(sch.nspname) = upper('public_staging') and
+           upper(tbl.relname) = upper('stg_pg__cars')) or (upper(sch.nspname) = upper('public_staging') and
+           upper(tbl.relname) = upper('stg_pg__breakdowns')) or (upper(sch.nspname) = upper('public_staging') and
+           upper(tbl.relname) = upper('stg_pg__locations')) or (upper(sch.nspname) = upper('public_staging') and
+           upper(tbl.relname) = upper('stg_pg__service_types')) or (upper(sch.nspname) = upper('public_intermediate') and
+           upper(tbl.relname) = upper('int_breakdowns_joined_to_cars')) or (upper(sch.nspname) = upper('public_intermediate') and
+           upper(tbl.relname) = upper('int_payments_joined_to_bookings')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('booking')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('customer')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('location')) or (upper(sch.nspname) = upper('public_intermediate') and
+           upper(tbl.relname) = upper('int_customers_name_concatenated')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('car')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('breakdown')) or (upper(sch.nspname) = upper('public_staging') and
+           upper(tbl.relname) = upper('stg_pg__categories')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('category')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('service')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m16:57:27.402652 [debug] [ThreadPool]: SQL status: SELECT 161 in 0.0 seconds
+[0m16:57:27.415748 [debug] [ThreadPool]: On carsharing.information_schema: ROLLBACK
+[0m16:57:27.416625 [debug] [ThreadPool]: On carsharing.information_schema: Close
+[0m16:57:27.477648 [info ] [MainThread]: Catalog written to /Users/vovix/Documents/Projects/AE book/carsharing/target/catalog.json
+[0m16:57:27.523411 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 1.8476577, "process_user_time": 2.942672, "process_kernel_time": 0.6659, "process_mem_max_rss": "104054784", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m16:57:27.524537 [debug] [MainThread]: Command `dbt docs generate` succeeded at 16:57:27.524374 after 1.85 seconds
+[0m16:57:27.525227 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m16:57:27.525736 [debug] [MainThread]: Connection 'carsharing.information_schema' was properly closed.
+[0m16:57:27.526465 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054b6a80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089a28d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089a2a20>]}
+[0m16:57:27.527071 [debug] [MainThread]: Flushing usage events
+[0m17:15:29.776692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dda9760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e7f2900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e7f2660>]}
+
+
+============================== 17:15:29.785624 | 9c005357-8e8b-4844-998c-41ccb4868c7c ==============================
+[0m17:15:29.785624 [info ] [MainThread]: Running with dbt=1.8.2
+[0m17:15:29.786956 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/vovix/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/vovix/Documents/Projects/AE book/carsharing/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt docs serve', 'send_anonymous_usage_stats': 'True'}
+[0m17:15:30.083652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9c005357-8e8b-4844-998c-41ccb4868c7c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e81cc50>]}
+[0m17:15:30.218032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9c005357-8e8b-4844-998c-41ccb4868c7c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e7a7530>]}
+[0m15:33:52.102482 [error] [MainThread]: Encountered an error:
+
+[0m15:33:52.198751 [error] [MainThread]: Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/requires.py", line 247, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/requires.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/main.py", line 303, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/task/docs/serve.py", line 29, in run
+    httpd.serve_forever()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m15:33:52.361221 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_wall_clock_time": 38451.9, "process_user_time": 5.235875, "process_kernel_time": 4.333064, "process_mem_max_rss": "89120768", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:33:52.367796 [debug] [MainThread]: Command `dbt docs serve` failed at 15:33:52.367406 after 38451.91 seconds
+[0m15:33:52.373381 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e515400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b454b30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc4d040>]}
+[0m15:33:52.376112 [debug] [MainThread]: Flushing usage events
